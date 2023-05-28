@@ -1,5 +1,10 @@
 function solution(string) {
   let res = "";
+  
+  res = string.replace(/([A-Z])/g, " $1");
+
+  return res;
+  /*
   let idx = [0];
   
   let arr = string.split("");
@@ -15,6 +20,7 @@ function solution(string) {
   }
 
   return res.trim();
+  */
 }
 
 console.log(solution('camelCasing'));
