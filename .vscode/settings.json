@@ -1,6 +1,4 @@
 {
-    "files.associations": {
-        "string": "cpp",
-        "xutility": "cpp"
-    }
+  "workbench.preferredHighContrastLightColorTheme": "Default High Contrast",
+  "workbench.preferredLightColorTheme": "Default High Contrast"
 }
