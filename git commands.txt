@@ -1,0 +1,9 @@
+//check status of the files in directory
+git status
+//add new file to the staging area
+git add 'New Cashier Does Not Know About Space or Shift' 
+//commit the file to repo with desired date
+git commit --date='2023-07-25' -m '[in-progress] codeWars 6Kyu'
+git push
+//check status of the files in directory
+git status
