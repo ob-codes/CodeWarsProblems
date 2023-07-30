@@ -3,26 +3,13 @@ function getOrder(input) {
   let actualItem = ["burger", "fries", "chicken", "pizza", "sandwich", "onionrings", "milkshake", "coke"];
   let desiredItem = ["Burger ", "Fries ", "Chicken ", "Pizza ", "Sandwich ", "Onionrings ", "Milkshake ", "Coke "];
   
-  for (let i=0; i< actualItem.length;i++){
-    let temp = input.indexOf(actualItem[i]);
-    while (temp > -1){
+  for (let i=0; i< actualItem.length;i++) {
+    while (input.includes(actualItem[i]) == true){
       result += desiredItem[i];
-      input[temp] = "$";
-    }      
-    i++;
+      input = input.replace(actualItem[i], '____');
+    }
   }
-  
-  /*
-  result = input.replaceAll("burger", " Burger");
-  result = result.replaceAll("fries", " Fries");
-  result = result.replaceAll("chicken", " Chicken");
-  result = result.replaceAll("pizza", " Pizza");
-  result = result.replaceAll("sandwich", " Sandwich");
-  result = result.replaceAll("onionrings", " Onionrings");
-  result = result.replaceAll("milkshake", " Milkshake");
-  result = result.replaceAll("coke", " Coke");
-  */
-  
+    
   return result.trim();
 }
 
