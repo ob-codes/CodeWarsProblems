@@ -53,7 +53,7 @@ function decrypt(str, times) {
 console.log(encrypt("This is a test!", 2)); // "s eT ashi tist!"
 
 console.log(encrypt("This is a test!", 1)); // "hsi  etTi sats!"
-//console.log(decrypt("20314", 1));
-//console.log(decrypt("hsi  etTi sats!", 1)); //"This is a test!"
+console.log(decrypt("20314", 1));
+console.log(decrypt("hsi  etTi sats!", 1)); //"This is a test!"
 console.log(decrypt(" Tah itse sits!", 3)); //"This is a test!"
 console.log(decrypt("hskt svr neetn!Ti aai eyitrsig", 1)) //"This kata is very interesting!"
