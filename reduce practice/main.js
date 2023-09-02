@@ -10,6 +10,6 @@ let output = users.reduce((acc, curr) => {
     acc.push(curr.firstName);
   }
   return acc;
-}, [])
+}, []);
 
 console.log(output);
