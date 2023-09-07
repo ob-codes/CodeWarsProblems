@@ -1,5 +1,7 @@
-function name(params) {
+function stringToArray(string) {
   let result = [];
+
+  result= string.split(" ");
 
   return result;
 }
