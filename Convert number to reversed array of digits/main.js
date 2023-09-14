@@ -10,4 +10,4 @@ function digitize(n) {
   return result;
 }
 
-console.log(digitize(35231));
+console.log(digitize(35231)); //[1,2,3,5,3]
