@@ -1,11 +1,28 @@
 function declareWinner(fighter1, fighter2, firstAttacker) {
   let result = "";
+  let isWinnerDecided = false, firstPlayerTurn = false;
+  
+  if (firstAttacker === fighter1.toString())
+    firstPlayerTurn = true;
 
-  if (firstAttacker === fighter1.name) {
+  while(!isWinnerDecided) {
+    if (firstPlayerTurn) {
+      fighter2.health -= fighter1.damagePerAttack;
+      firstPlayerTurn = false;
+    }
+    else {
+      fighter1.health -= fighter2.damagePerAttack;
+      firstPlayerTurn = true;
+    }
 
-  }
-  else {
-    
+    if (fighter1.health <= 0){
+      isWinnerDecided = true;
+      result = fighter2.toString();
+    }
+    else if (fighter2.health <= 0){
+      isWinnerDecided = true;
+      result = fighter1.toString();
+    }      
   }
 
   return result;
