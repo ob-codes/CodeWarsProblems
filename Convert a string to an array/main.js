@@ -6,4 +6,4 @@ function stringToArray(string) {
   return result;
 }
 
-console.log(name("Robin Singh")); //["Robin", "Singh"]
+console.log(stringToArray("Robin Singh")); //["Robin", "Singh"]
