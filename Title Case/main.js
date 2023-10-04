@@ -1,17 +1,9 @@
-function titleCase(input, except) {
+function titleCase(input, except="") {
   let result = '', result2 = '';
 
   if (input === null || input === '')
     return '';
 
-/*
-  for (let i = 1; i < input.length; i++) {
-    if (input[i-1] ===' ')
-      result += input[i].toUpperCase();
-    else
-      result += input[i].toLowerCase();
-  }
-*/
   result2 += input.split(' ').map((el, idx) => {    
     if (idx === 0)
       return el[0].toUpperCase() + el.substring(1).toLowerCase();
