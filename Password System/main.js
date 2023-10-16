@@ -1,6 +1,14 @@
 function helpZoom(arr) {
   let result = 'No';
 
+  if (!Number.isInteger(Math.sqrt(arr.length)))
+    return "No";
+  else {
+    while( arr.length > 1) {
+      if (arr.pop() !== arr.shift())
+        return "No";
+    }
+  }
 
   return 'Yes';
 }
