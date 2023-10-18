@@ -12,7 +12,7 @@ function accum(params) {
     result += "-";
   });
   
-  return result.slice(0, -1);
+  return result.slice(0, -1); //to avoid "-" in the end
 }
 
 console.log(accum("abcd"));
