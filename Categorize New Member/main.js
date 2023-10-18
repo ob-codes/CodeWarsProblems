@@ -1,6 +1,12 @@
 function openOrSenior(data){
   let result=[];
 
+  data.forEach(element => {
+    if (element[0] >= 55 && element[1] > 7)
+      result.push('Senior');
+    else
+      result.push('Open');
+  });
 
   return result;
 }
