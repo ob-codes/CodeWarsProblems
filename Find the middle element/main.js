@@ -1,6 +1,15 @@
 function gimme(triplet) {
   let result = -1;
- 
+
+  sortedArray = [...triplet];
+  sortedArray.sort((a, b) => a-b);
+
+  if (sortedArray[1] === triplet[0])
+    result = 0;
+  else if (sortedArray[1] === triplet[1])
+    result = 1;
+  else
+    result = 2;   
   
   return result;
 }
