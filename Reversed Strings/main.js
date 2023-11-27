@@ -1,5 +1,11 @@
 function solution(params) {
   let result = [];
+
+  params.split("").forEach(element => {
+    result.unshift(element);
+  });
+
+  return result.join("").toString();
 }
 
 console.log(solution('world')); // =>  'dlrow'
