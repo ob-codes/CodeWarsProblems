@@ -2,6 +2,14 @@ function sortArray(params) {
   let result = [];  
   let paramsOdd = params.filter(el => el%2);
 
+  paramsOdd.sort((a,b) => a-b);
+  let index=0;
+  params.forEach(element => {
+    if(element%2==0)
+      result.push(element);
+    else
+      result.push(paramsOdd[index++]);
+  });
 
   return result;
 }
