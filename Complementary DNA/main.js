@@ -1,7 +1,7 @@
-function name(params) {
+function DNAStrand(dna) {
   let result="";
 
-  params.split("").forEach(el => {
+  dna.split("").forEach(el => {
     if (el === 'A')
       result+='T';
     else if (el === 'T')
@@ -11,9 +11,9 @@ function name(params) {
     else if (el === 'C')
       result+='G';
   });
-
+  
   return result;
 }
 
-console.log(name("ATTGC")); //--> "TAACG"
-console.log(name("GTAT")); //--> "CATA"
+console.log(DNAStrand("ATTGC")); //--> "TAACG"
+console.log(DNAStrand("GTAT")); //--> "CATA"
