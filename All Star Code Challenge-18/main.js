@@ -1,9 +1,14 @@
-function str_count(str, ch) {
+function strCount(str, ch) {
   let result = 0;
+  
+  str.split("").forEach(el => {
+    if (el === ch)
+      result++;
+  });
 
   return result;
 }
 
-console.log(str_count("Hello", 'o'));//1
-console.log(str_count("Hello", 'l'));//2
-console.log(str_count("", 'z'));//0
+console.log(strCount("Hello", 'o'));//1
+console.log(strCount("Hello", 'l'));//2
+console.log(strCount("", 'z'));//0
