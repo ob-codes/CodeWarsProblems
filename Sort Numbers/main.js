@@ -4,7 +4,17 @@ function solution(params) {
     return result;
   
   result = params.sort((a,b) => a-b);
-    
+  
+  for (let i = params.length -2; i >= 0; i--) {
+    if (params[i] > params[i+1]) {
+      params[i] = params[i+1] + params[i];
+      params[i+1] = params[i] - params[i+1];      
+      params[i] = params[i] - params[i+1];
+
+      i = params.length -1;
+    }
+  }
+  
   return params;
 }
 
