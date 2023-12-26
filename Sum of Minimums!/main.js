@@ -1,6 +1,9 @@
 function sumOfMinimums(arr) {
   let result = 0, temp;
-
+  
+  arr.forEach(element => {
+    result += Math.min(...element);
+  });
 
   return result;
 }
