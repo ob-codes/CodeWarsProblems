@@ -1,6 +1,7 @@
 function noSpace(params) {
   let result="";
 
+  result = params.split("").filter(el => el!==' ').join("");
 
   return result;
 }
