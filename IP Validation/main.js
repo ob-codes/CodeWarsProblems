@@ -1,7 +1,23 @@
 function isValidIP(params) {
   let result = true, paramsArr=[], temp=0;
 
-  
+  paramsArr = params.split(".");
+  if (paramsArr.length != 4)
+    return false;
+
+  paramsArr.forEach(element => {
+    temp = parseInt(element);
+    
+    //checks for non-numbers value
+    if (isNaN(temp))
+      result = false;
+    //checks for leading zeros
+    if (temp.toString().length != element.length)
+      result = false;
+    //checks for values 0-255
+    if (temp<0 || temp>255)
+      result = false;
+  });
 
   return result;
 }
