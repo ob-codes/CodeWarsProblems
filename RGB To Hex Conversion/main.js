@@ -6,7 +6,19 @@
 */
 function rgb(r, g, b) {
   let result = "", temp=0;
+    
+  argumentsArr = [...arguments];
   
+  argumentsArr.forEach(el => {
+    if (el > 255) 
+      el = 255;
+    else if (el <0) 
+      el = 0;
+    
+    temp = el.toString(16);
+
+    result += temp.length > 1 ? temp: '0' + temp;
+  });
   
   return result.toUpperCase();
 }
