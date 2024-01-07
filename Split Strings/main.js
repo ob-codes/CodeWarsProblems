@@ -9,6 +9,16 @@ function solution(params) {
   let result = [];
   let argsArr = params.split("");
 
+  while(argsArr.length > 1) {
+    let temp="";
+    temp += argsArr.shift();
+    temp += argsArr.shift();
+    result.push(temp);
+  }
+
+  if (argsArr.length == 1) {
+    result.push(argsArr + '_');
+  }
 
   return result;
 }
