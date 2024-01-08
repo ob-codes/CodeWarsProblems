@@ -12,7 +12,15 @@
 function calc(params) {
   let result = 0, total1="";
 
+  let paramsArr = params.split("");
+  paramsArr.forEach(el => {
+    total1 += el.charCodeAt(0);
+  });
   
+  //value difference of 6 is created if number-7 appears once, therefore, counter of number7 times 6 can give the answer
+  counterOfValue7 = total1.split("").filter((el) => el == '7').length;
+  
+  result = counterOfValue7 * 6;
   
   return result;
 }
