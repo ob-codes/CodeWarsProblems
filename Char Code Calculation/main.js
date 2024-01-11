@@ -25,6 +25,7 @@ function calc(params) {
   return result;
 }
 
-console.log(calc('ABC'));
-console.log(calc('aaaaaddddr'));
-console.log(calc('ABC'));
+console.log(calc('jaam'));//12
+console.log(calc('ABC'));//6
+console.log(calc('aaaaaddddr'));//30
+console.log(calc('jfmgklf8hglbe')); //6
