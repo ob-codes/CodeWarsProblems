@@ -8,13 +8,29 @@
   c. If match found, replace smaller string char with '' to avoid duplicate matching and move to next char of big string
   d. If match is not found in smaller string, that char is the answer
 */
-
+//codewars (6Kyu)
 function addedChar(str1, str2) {
   let result = "";
 
   arr1 = str1.split("");
   arr2 = str2.split("");
   
+  for (let j = 0; j < arr2.length; j++) {
+    let isFound = false;
+
+    for (let i = 0; i < arr1.length; i++) {
+      if (arr2[j] === arr1[i]) {
+        isFound = true;
+        arr1[i] = "";
+        break;
+      }
+    }
+
+    if (!isFound) {
+      result = arr2[j];
+      break;
+    }    
+  }
   
   return result;
 }
