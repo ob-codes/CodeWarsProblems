@@ -14,6 +14,11 @@ function narcissistic(params) {
   let arr = params.toString().split("");
   let len = params.toString().length;
 
+  arr.forEach(element => {
+    temp += Math.pow(element, len);
+  });
+
+  result = temp === params;
   return result;
 }
 
