@@ -8,7 +8,30 @@
   c. values having equal weights to be arranged lexographicaly
 */
 //codewars (5Kyu)
+function compareWeight(a, b) {
+  let weightDiff = a.weight - b.weight;
+  
+  let arrA = a.value.split("");
+  let arrB = b.value.split("");
 
+  if (weightDiff === 0) {
+    while (arrA.length > 0 || arrB.length > 0) {
+      if (arrA[0] !== arrB[0]) {       
+        if (arrA.length === 0) weightDiff = -1;
+        else if (arrB.length === 0) weightDiff = 1;
+        else weightDiff = arrA[0] > arrB[0] ? 1 : -1;
+
+        break;
+      }
+      else {
+        arrA.shift();
+        arrB.shift();
+      }
+    }
+  }
+
+  return weightDiff;
+}
 
 function orderWeight(params) {
   let result = "", objArr=[], arr = params.split(" ");
