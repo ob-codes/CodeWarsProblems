@@ -10,6 +10,26 @@
 //codewars (5Kyu)
 
 
+function orderWeight(params) {
+  let result = "", objArr=[], arr = params.split(" ");
+  
+  arr.forEach(element => {
+    let sumOfDigits = 0, tempObj={};
+
+    sumOfDigits = element.split("").reduce((acc, c) => acc+(+c), 0);
+    
+    tempObj.value = element;
+    tempObj.weight = sumOfDigits;
+
+    objArr.push(tempObj); //`${element}:${sumOfDigits}`    
+  });  
+  
+  objArr.sort(compareWeight);
+  objArr.forEach(el => result += `${el.value} `);
+
+  return result.trim();
+}
+
 console.log(orderWeight("120 12 2 102"));//"2 102 12 120"
 console.log(orderWeight("103 123 4444 99 2000"));//"2000 103 123 4444 99"
 console.log(orderWeight("56 65 74 100 99 68 86 180 90"));//"100 180 90 56 65 74 68 86 99"
