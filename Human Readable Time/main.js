@@ -12,6 +12,15 @@
 function humanReadable(seconds) {
   let result = "", arr=[];
 
+  hr = parseInt(seconds/3600);
+  min = parseInt(seconds/60 - hr*60);
+  sec = parseInt(seconds - min*60 - hr*3600);
+
+  hr =  hr.toString().padStart(2, 0);
+  min = min.toString().padStart(2, 0);
+  sec = sec.toString().padStart(2, 0);
+
+  result = `${hr}:${min}:${sec}`;
 
   return result;
 }
