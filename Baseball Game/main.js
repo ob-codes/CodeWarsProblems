@@ -12,6 +12,18 @@
 */
 function name(ops) {
     var result = null, temp=[];
+    
+    for (let i=0;i<ops.length;i++){
+      if (ops[i] >= '0' && ops[i] <= '9')
+        temp.push(ops[i]);
+      else if (ops[i] === 'D')
+        temp.push(2 * temp[temp.length -1]);
+      else if (ops[i] === 'C')
+        temp.pop();
+      else if (ops[i] === '+')
+        temp.push(Number(temp[temp.length -1]) + Number(temp[temp.length -2]));
+    }
+    result = temp.reduce((acc, c) => acc + (+c), 0);
 
     return result;
 }
