@@ -12,6 +12,14 @@ function isPrime(inp) {
   if (inp <= 1) 
     return false;
 
+  for (let i=2; i <= Math.sqrt(inp);) {
+    if (inp % i === 0) {
+      return false;
+    }
+    if (i%2) i += 2;
+    else i++;
+  }
+
   return true;
 }
 
