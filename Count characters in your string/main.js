@@ -13,6 +13,19 @@ function count(str) {
   let result = {}, counter=0;
   let arr = str.split("");
   
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    counter = 1;
+    for (let j = i+1; j < arr.length; j++) {
+      const element2 = arr[j];
+      if (element === element2) {
+        counter++;
+        arr[j] = '';
+      }
+    }
+    if (element !== '')
+      result[element] = counter;
+  }
   return result;
 }
 
