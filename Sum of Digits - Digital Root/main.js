@@ -1,5 +1,10 @@
 function digitalRoot(params) {  
+  temp = params.toString().split("").reduce((acc, c) => acc + (+c), 0).toString();
   
+  if (params.length <= 1)
+    return Number(temp);
+
+  return digitalRoot(temp);
 }
 
 console.log(digitalRoot(16));//7
