@@ -12,6 +12,22 @@
 //codewars (6Kyu)
 function raisedSum(a, b) {
   let result=[], temp=0;
+
+  for (let i = a; i < b; i++) {
+    if (i < 10) {
+      result.push(i);
+    } 
+    else {
+      i.toString().split("").map((el, idx) => {
+        temp += Math.pow(Number(el), idx+1);
+      });
+
+      if (i === temp) {
+        result.push(i);
+      }
+      temp = 0;
+    }    
+  }
  
   return result;
 }
