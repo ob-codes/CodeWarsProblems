@@ -3,6 +3,11 @@
 - Return: array of eurekas
 - Example: 89 -> 8^1+9^2 -> 89 => eureka
 - Pseudo-code:
+  a. Check status of each value in the input range
+  b. If the value is single digit, its eureka
+  c. If value is 2-digits or more, calculate the raised sum of its digits
+  d. If the raised sum equal to actual value, its eureka
+  e. Push eureka numbers to result array
 */
 //codewars (6Kyu)
 function raisedSum(a, b) {
