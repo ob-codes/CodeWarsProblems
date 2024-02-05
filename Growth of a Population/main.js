@@ -3,6 +3,12 @@
 //codewars (7Kyu)
 function nbYear(p0, percent, aug, p){
   let result = 0, years =0;
+
+  while (p0 < p) {
+    years++;
+    p0 = parseInt(p0 + p0*percent/100 + aug);
+  }
+  result = years;
   return result;
 }
 
