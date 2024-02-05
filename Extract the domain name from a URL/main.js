@@ -1,4 +1,12 @@
 /*
+- Parameter: url (string)
+- Return: domain name (string)
+- Example:  url = "http://github.com/carbonfive/raygun" -> domain name = "github"
+- Pseudo-code:
+  a. Split the string using '.'
+  b. Check if first word contain 'www', then 2nd word is the answer
+  c. Check if first word contain 'http', then split the word using '://' and answer is 2nd word
+  d. If first word not contain 'www' & 'http', then first word is the answer
 */
 //codewars (5Kyu)
 function domainName(url) {
