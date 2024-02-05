@@ -12,6 +12,17 @@
 function domainName(url) {
   let result = "";
   
+  temp = url.split('.');
+
+  if (temp[0].includes('www'))
+    result = temp[1];
+  else if (temp[0].includes('http')) {
+    temp2 = temp[0].split("://");
+    result = temp2[1];
+  }
+  else
+    result = temp[0];
+  
   return result;
 }
 
