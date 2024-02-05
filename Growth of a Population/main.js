@@ -1,4 +1,12 @@
 /*
+- Paramter: current population, percent increase, inhabitants coming/leaving, expected population
+- Return: no of years to reach/surpass expected population
+- Example: 1500 population with increase of 2% per annum will take 15 years to reach 5000
+- Pseudo-code:
+  a. Increase current population by input percent
+  b. Add inhabitants coming or subtract inhabitants leaving each year 
+  c. Increment year count by one in every iteration
+  d. Repeat until current existing reach/surpass expected population 
 */
 //codewars (7Kyu)
 function nbYear(p0, percent, aug, p){
