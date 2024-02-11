@@ -15,7 +15,9 @@ function spinWords(params) {
     temp = [];
 
     if (element.length >= 5) {
-      element.split("").forEach(el => temp.unshift(el));
+      //element.split("").forEach(el => temp.unshift(el));
+
+      result.push(element.split("").reverse().join(""));
     }
     else
       result.push(element);    
