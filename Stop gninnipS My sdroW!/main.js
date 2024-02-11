@@ -11,6 +11,16 @@
 function spinWords(params) {
   let result = [], temp=[];
 
+  params.split(" ").forEach(element => {
+    temp = [];
+
+    if (element.length >= 5) {
+      element.split("").forEach(el => temp.unshift(el));
+    }
+    else
+      result.push(element);    
+  });
+
   return result.join(" ");
 }
 console.log(spinWords("Hey fellow warriors"));//"Hey wollef sroirraw"
