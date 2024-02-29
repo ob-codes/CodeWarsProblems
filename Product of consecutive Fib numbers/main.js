@@ -1,3 +1,14 @@
+/*
+- Parameter: number
+- Return: array
+- Example: 714 => [ 21, 34 ] -> true
+- Pseudo-code:
+  a. Generate two elements of fabionacci series
+  b. Check if product of these two elements >= input
+  c. If not, generate next two elements until 'b' satisfies
+  d. If product and input are equal, return true otherwise false
+*/
+
 //codewars (5Kyu)
 function productFib(num) {
   let result = [];
