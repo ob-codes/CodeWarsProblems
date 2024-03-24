@@ -32,4 +32,4 @@ class Num {
 }
 
 let num1 = new Num(786);
-console.log(num1.tellResult());
+console.log(num1.tellResult()); //seven.eight.six
