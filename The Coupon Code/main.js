@@ -1,5 +1,16 @@
 function compareDate(currentDate, expirationDate) {
-  
+  let currentDateArr = new Date(currentDate);
+  let expirationDateArr = new Date(expirationDate);
+
+  if (currentDateArr.getFullYear() < expirationDateArr.getFullYear())
+    return true;  
+  else if (currentDateArr.getFullYear() == expirationDateArr.getFullYear()) {
+    if (currentDateArr.getMonth() < expirationDateArr.getMonth())
+      return true;
+    else if (currentDateArr.getMonth() == expirationDateArr.getMonth())
+      if (currentDateArr.getDate() <= expirationDateArr.getDate())
+        return true;
+  }
 
   return false;
 }
