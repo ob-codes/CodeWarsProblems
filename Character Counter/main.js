@@ -7,21 +7,13 @@ function validateWord(input) {
     let temp = 0;
     const outerElement = arr[i];
     
-    for (let j = i; j < arr.length; j++) {
-      if (outerElement == arr[j] && arr[j] != "") {
-        arr[j] = "";
-        ++temp;
-      }
-    }
-    temp > 0 ? count.push(temp) : 0;
+    temp = arr.filter(el => el === outerElement).length;
+
+    if (!count.includes(temp))
+      count.push(temp);
   }
 
-  count.filter((el, idx, countArray) => {
-    if (el != countArray[0])
-      result = false;
-  });
-
-  return result;
+  return count.length === 1;
 }
 
 console.log(validateWord("abcabc"));//true
