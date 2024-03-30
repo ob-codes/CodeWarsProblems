@@ -1,6 +1,26 @@
 function validateWord(input) {
   let result = true, count = [];
 
+  arr = input.toLowerCase().split("");
+
+  for (let i = 0; i < arr.length; i++) {
+    let temp = 0;
+    const outerElement = arr[i];
+    
+    for (let j = i; j < arr.length; j++) {
+      if (outerElement == arr[j] && arr[j] != "") {
+        arr[j] = "";
+        ++temp;
+      }
+    }
+    temp > 0 ? count.push(temp) : 0;
+  }
+
+  count.filter((el, idx, countArray) => {
+    if (el != countArray[0])
+      result = false;
+  });
+
   return result;
 }
 
