@@ -1,5 +1,10 @@
 function calculateYears(principal, interest, tax, d) {
   let years = 0;
+  
+  while (d > principal) {
+    ++years;
+    principal = principal + (principal * interest) - (principal * interest)*tax;
+  }
 
   return years;
 }
