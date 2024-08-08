@@ -1,5 +1,13 @@
 function addLength(str) {
-  //start-here
+  let result = [];
+
+  let words = str.split(' ');
+  
+  words.forEach(el => {
+    result.push(el + ' ' + el.length);
+  });
+
+  return result;
 }
 
 console.log(addLength('apple ban'), ["apple 5", "ban 3"]);
