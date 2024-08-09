@@ -1,6 +1,8 @@
 "use strict";
 
 function flattenAndSort(array) {
+  let newArr = array.join(',').split(',');
+  return newArr.sort((a, b) => a-b);
 }
 
 console.log(flattenAndSort([]), []);
