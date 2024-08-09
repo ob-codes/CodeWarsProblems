@@ -2,7 +2,9 @@
 
 function flattenAndSort(array) {
   let newArr = array.join(',').split(',');
-  return newArr.sort((a, b) => a-b);
+  newArr.sort((a, b) => a-b);
+
+  return newArr.map(Number);
 }
 
 console.log(flattenAndSort([]), []);
