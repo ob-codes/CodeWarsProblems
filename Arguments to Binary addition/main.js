@@ -1,5 +1,5 @@
 function arr2bin(arr) {
-  let sum = arr.reduce((acc, c) => acc + c, 0);
+  let sum = arr.reduce((acc, c) => typeof(c) == "number" ? acc + c : acc, 0);
 
   return sum.toString(2);
 }
