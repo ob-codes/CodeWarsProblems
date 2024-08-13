@@ -1,5 +1,5 @@
 function isPalindrome(x) {
-  // your code here
+  return x === x.split('').reverse().join('');
 }
 
 console.log(isPalindrome("a"), true);
